@@ -12,6 +12,9 @@ pipeline {
             steps {
                 sh 'cat /etc/alpine-release'
             }
+            steps {
+                sh 'date'
+            }
         }
     }
 }
