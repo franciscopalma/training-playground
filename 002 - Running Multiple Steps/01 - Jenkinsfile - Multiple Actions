@@ -5,5 +5,9 @@ pipeline {
 		}
 	}
     stages {
+		steps{
+			sh 'echo date > ficheiro.txt'
+			sh 'cat ficheiro.txt'
+		}
     }
 }
