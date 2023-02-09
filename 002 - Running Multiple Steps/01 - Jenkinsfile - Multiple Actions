@@ -4,10 +4,18 @@ pipeline {
 			image 'alpine:latest' 
 		}
 	}
-    stages {
+
+    stages('build'){
 		steps{
-			sh 'echo date > ficheiro.txt'
-			sh 'cat ficheiro.txt'
+			script{
+				sh 'echo date > ficheiro.txt'
+				for(int i = 0; 1<2; i++){
+					sh 'cat ficheiro.txt'
+					sleep 10
+				}
+			}
+			
+
 		}
     }
 }
