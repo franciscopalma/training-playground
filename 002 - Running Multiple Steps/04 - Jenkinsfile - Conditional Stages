@@ -1,9 +1,25 @@
 pipeline {
+    parameters {
+                    choice(name: 'PLATFORM_FILTER', choices: ['build', 'test'], description: 'Run on specific platform')
+                    
+                }
     agent { 
 		docker { 
 			image 'alpine:latest' 
 		}
 	}
     stages {
+		stage('build'){
+			steps{
+
+			}
+
+		}
+		stage('test'){
+			steps{
+
+			}
+			
+		}
     }
 }
