@@ -8,11 +8,12 @@ pipeline {
 		stage('build'){
 			steps{
 				sh 'date > ficheiro.txt'
+				sh 'cat ficheiro.txt'
 			}
 		}
 		stage('test'){
 			steps{
-				sh 'grep 2019 ficheiro.txt || true'
+				sh 'grep 2019 ficheiro.txt'
 			}
 		}
     }
