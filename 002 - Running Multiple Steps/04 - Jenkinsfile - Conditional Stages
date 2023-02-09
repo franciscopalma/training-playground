@@ -11,7 +11,7 @@ pipeline {
     stages {
 		stage('build'){
 			when{
-				envirnoment name:'stage_choice', value: 'build'
+				environment name:'stage_choice', value: 'build'
 			}
 			steps{
 				sh 'echo build'
@@ -20,7 +20,7 @@ pipeline {
 		}
 		stage('test'){
 			when{
-				envirnoment name:'stage_choice', value: 'test'
+				environment name:'stage_choice', value: 'test'
 			}
 			steps{
 				sh 'echo test'
