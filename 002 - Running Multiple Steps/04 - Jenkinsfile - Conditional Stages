@@ -1,6 +1,6 @@
 pipeline {
     parameters {
-                    choice(name: 'PLATFORM_FILTER', choices: ['build', 'test'], description: 'Run on specific platform')
+                    choice(name: 'stage_choice', choices: ['build', 'test'], description: 'Run on specific platform')
                     
                 }
     agent { 
@@ -10,6 +10,9 @@ pipeline {
 	}
     stages {
 		stage('build'){
+			when{
+				envirnoment name:'stage_choice', value: 'build'
+			}
 			steps{
 
 			}
