@@ -14,13 +14,16 @@ pipeline {
 				envirnoment name:'stage_choice', value: 'build'
 			}
 			steps{
-
+				sh 'echo build'
 			}
 
 		}
 		stage('test'){
+			when{
+				envirnoment name:'stage_choice', value: 'test'
+			}
 			steps{
-
+				sh 'echo test'
 			}
 			
 		}
