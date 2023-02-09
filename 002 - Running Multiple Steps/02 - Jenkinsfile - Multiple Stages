@@ -13,7 +13,7 @@ pipeline {
 		}
 		stage('test'){
 			steps{
-				sh 'grep 2019 ficheiro.txt'
+				sh 'grep 2023 ficheiro.txt'
 			}
 		}
     }
