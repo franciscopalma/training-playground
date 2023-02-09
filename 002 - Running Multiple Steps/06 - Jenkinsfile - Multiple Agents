@@ -8,7 +8,7 @@ pipeline {
 					} 
 				}
 			steps{
-				sh 'mvm --version'
+				sh 'mvn --version'
 			}
 		}
 		stage('npm'){
