@@ -9,8 +9,8 @@ pipeline {
         stage('build') {
             steps {
                 script {
-                	def buildConfigs = '''[{name: "teste", command: "echo qwe"},
-                            {name: "teste2" , command: "echo qwer"}]'''
+                	def buildConfigs = {name: "teste", command: "echo qwe"},
+                            {name: "teste2" , command: "echo qwer"}
                 	buildConfigs.each{ name , command ->
                 		sh "echo '$name' && $command"
 					}
