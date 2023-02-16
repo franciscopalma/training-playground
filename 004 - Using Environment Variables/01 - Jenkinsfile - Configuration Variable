@@ -4,7 +4,7 @@ pipeline {
 			image 'alpine:latest' 
 		}
 	}
-    enviroment{
+    environment{
         NOTIFICATION_EMAIL = 'Email'
     }
     stages {
