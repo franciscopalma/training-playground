@@ -11,8 +11,8 @@ pipeline {
                 script {
                 	def buildConfigs = '''[{name: "teste", command: "echo qwe"},
                             {name: "teste2" , command: "echo qwer"}]'''
-                	buildConfigs.each{ buildConfig ->
-                		sh "echo '$buildConfig.name' && $buildConfig.command"
+                	buildConfigs.each{ name , command ->
+                		sh "echo '$name' && $command"
 					}
                 }
             }
