@@ -9,8 +9,8 @@ pipeline {
         stage('build') {
             steps {
                 script {
-                	def buildConfigs = readJSON text: '{name: "teste", command: "echo qwe"},
-                            {name: "teste2" , command: "echo qwer"}',  returnPojo: true
+                	def buildConfigs = readJSON text: '{"name": "teste", "command": "echo qwe"},
+                            {"name": "teste2" , "command": "echo qwer"}',  returnPojo: true
                 	buildConfigs.each{ name , command ->
                 		sh "echo '$name' && $command"
 					}
