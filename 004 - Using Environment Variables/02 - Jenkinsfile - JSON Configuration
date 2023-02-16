@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                 	def buildConfigs = readJSON text: '{"name": "teste", "command": "echo qwe"},
-                            {"name": "teste2" , "command": "echo qwer"}',  returnPojo: true
+                            {"name": "teste2" , "command": "echo qwer"}'
                 	buildConfigs.each{ name , command ->
                 		sh "echo '$name' && $command"
 					}
