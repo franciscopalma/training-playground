@@ -4,7 +4,8 @@ pipeline {
 			image 'alpine:latest' 
 		}
 	}
-    triggers {
+	// a cada alteração do Jenkinsfile, no proximo minuto ira despoletar a pipeline e fazer o build
+    triggers { 
       pollSCM '* * * * *'
     }
     stages {
