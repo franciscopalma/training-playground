@@ -19,7 +19,7 @@ pipeline {
 		}
 		stage('notification'){
 			steps{
-				echo NUMBER_OF_ISSUES
+				echo "$NUMBER_OF_ISSUES"
 			}
 		}	
     }
