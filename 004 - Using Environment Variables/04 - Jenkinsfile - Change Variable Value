@@ -11,7 +11,10 @@ pipeline {
     stages {
 		stage('teste'){
 			steps{
-				env.NUMBER_OF_ISSUES = 10
+				script{
+					env.NUMBER_OF_ISSUES = 10
+				}
+				
 			}
 		}
 		stage('notification'){
