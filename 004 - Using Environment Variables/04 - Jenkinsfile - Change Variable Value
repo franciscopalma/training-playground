@@ -18,7 +18,6 @@ pipeline {
 			steps{
 				echo NUMBER_OF_ISSUES
 			}
-		}
-			
+		}	
     }
 }
