@@ -8,7 +8,7 @@ pipeline {
         stage('tests') {
             steps {
                 //sh "mvn -f '005 - Recording Test Results and Artifacts/03 - Sonar Integration"
-                sh "mvn -f '005 - Recording Test Results and Artifacts/03 - Sonar Integration/' compile sonar:sonar -Dsonar.host.url=http://3.124.164.63:8081/about -Dsonar.projectKey=sonarqubeID" //id pode ser qualuqer um neste caso
+                sh "mvn -f '005 - Recording Test Results and Artifacts/03 - Sonar Integration/' compile sonar:sonar -Dsonar.host.url=http://3.124.164.63:8081/ -Dsonar.projectKey=sonarqubeID" //id pode ser qualuqer um neste caso
             }
         }
     }
