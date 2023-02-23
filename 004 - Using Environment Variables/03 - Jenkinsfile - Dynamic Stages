@@ -14,9 +14,9 @@ pipeline {
                 	def buildConfigs = readJSON text: '''[{"stage": "teste"},
                             {"stage": "teste2" }]'''
                 	buildConfigs.each{ buildConfig ->
-                		stage("$buildConfig.stage") {
-                            sh "echo '$buildConfig.stage'"
-                        }
+                		stage("$buildConfig.stage") 
+                             echo buildConfig.stage
+                        
 					}
                 }
             }
