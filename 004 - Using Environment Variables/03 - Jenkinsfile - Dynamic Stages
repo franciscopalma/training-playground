@@ -15,7 +15,7 @@ pipeline {
                             {"stage": "teste2" }]'''
                 	buildConfigs.each{ buildConfig ->
                 		stage("$buildConfig.stage") {
-                            sh "echo '$buildConfig.stage'
+                            sh "echo '$buildConfig.stage'"
                         }
 					}
                 }
