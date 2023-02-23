@@ -1,13 +1,16 @@
 pipeline {
     agent { 
 		docker { 
-			image 'alpine:latest' 
+			image 'maven:3.5.2' 
 		}
 	}
     stages {
         stage('tests') {
             steps {
-                sh ""
+                sh "mvn -f '005 - Recording Test Results and Artifacts/02 - Java Unit Tests' package"
+                sh "mvn verify sonar:sonar \
+                    -Dsonar.host.url=https://3.124.164.63:8081/ \ 
+                    "
             }
         }
     }
