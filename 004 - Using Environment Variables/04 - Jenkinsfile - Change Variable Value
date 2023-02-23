@@ -11,12 +11,12 @@ pipeline {
     stages {
 		stage('teste'){
 			steps{
-				NUMBER_OF_ISSUES = 10
+				env.NUMBER_OF_ISSUES = 10
 			}
 		}
 		stage('notification'){
 			steps{
-				echo NUMBER_OF_ISSUES
+				echo env.NUMBER_OF_ISSUES
 			}
 		}	
     }
