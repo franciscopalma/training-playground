@@ -7,11 +7,11 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh "curl www.google.com > file.txt"
+                sh "curl www.google.com > file.html"
             }
             post {
                 always {
-                    archiveArtifacts artifacts: 'file.txt', fingerprint: true
+                    archiveArtifacts artifacts: '../file.html', fingerprint: true
                 }
             }
         }
