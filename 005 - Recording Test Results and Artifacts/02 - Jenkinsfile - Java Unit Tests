@@ -1,13 +1,13 @@
 pipeline {
     agent { 
 		docker { 
-			image 'alpine:latest' 
+			image 'maven:latest' 
 		}
 	}
     stages {
         stage('tests') {
             steps {
-                sh "java '005 - Recording Test Results and Artifacts\02 - Java Unit Tests\src\test\java\training\HelloWorldTest.java'"
+                sh "mvn '005 - Recording Test Results and Artifacts/02 - Java Unit Tests/src/test/java/training/HelloWorldTest.java'"
             }
         }
     }
